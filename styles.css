@@ -179,6 +179,17 @@ body {
   .window .item {
     margin-right: 0;
     text-align: center;
+    border-bottom: 3px solid #333;
+    transition: all 0.3s ease;
+  }
+  
+  .window:hover .item {
+    border-bottom: 3px solid #666;
+    transform: translateY(-2px);
+  }
+  
+  .window:active .item {
+    transform: translateY(0);
   }
   
   .profile {
@@ -349,6 +360,7 @@ body {
   
   .project-card {
     height: auto;
+    min-height: 380px;
   }
   
   .project-content {
@@ -356,11 +368,17 @@ body {
   }
   
   .project-overlay {
-    position: relative;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    padding: 25px;
+    background-color: rgba(240, 236, 230, 0.97);
+    transition: opacity 0.3s ease;
+  }
+  
+  .project-card:hover .project-overlay {
     opacity: 1;
     pointer-events: auto;
-    padding: 0 20px 20px;
-    background-color: transparent;
   }
   
   .project-overlay .project-description {
@@ -380,6 +398,7 @@ body {
   
   .project-card {
     max-width: 100%;
+    min-height: 380px;
   }
   
   .project-image {
