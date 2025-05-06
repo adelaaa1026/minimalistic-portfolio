@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown Redesign - Accessibility Study</title>
+  <link rel="stylesheet" href="project-styles.css">
+</head>
+<body>
+    <div class="hero-image">
+        <img src="images/dropdown.jpg" alt="Dropdown Redesign" class="hero-image">
+    </div>
+  <div class="project-container">
+    <div class="back-button">
+      <a href="index.html#projects">Back to Projects</a>
+    </div>
+
+    <header class="project-header">
+        <h1>Dropdown Redesign: Accessibility Study</h1>
+        <div class="project-meta">
+          <div class="meta-section">
+            <div class="meta-item">
+              <span class="meta-label">Role</span>
+              <span class="meta-value">UX Researcher & Designer</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Timeline</span>
+              <span class="meta-value">One week</span>
+            </div>
+          </div>
+          <div class="meta-section">
+            <div class="meta-item">
+              <span class="meta-label">Skills</span>
+              <div class="project-tags">
+                <span class="project-tag">Accessibility</span>
+                <span class="project-tag">UI/UX</span>
+                <span class="project-tag">User Research</span>
+              </div>
+            </div>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Users</span>
+            <span class="meta-value">Dropdown Users</span>
+          </div>
+          <div class="meta-section">
+            <div class="meta-item">
+              <span class="meta-label">Lessons</span>
+              <span class="meta-value">This project taught me that accessibility isn't just about compliance, but about creating intuitive experiences for all users. By analyzing dropdown menus across different platforms, I learned how small design decisions can create or eliminate barriers for users with different needs. Most importantly, I discovered that the best designs emerge when you consider multiple interaction methods from the start, rather than treating accessibility as an afterthought.</span>
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <section class="project-intro">
+      <p>Have you ever noticed the dropdowns or checkboxes on a website? Have you ever tried using a keyboard to interact with them and found it challenging? These elements, known as <b>components</b>, are reusable building blocks that designers use to create consistent and functional interfaces.</p>
+      <p>In this case study, we analyzed the accessibility of dropdown menus in three commonly used applications: Google Docs, MacOS File System, and Brown CS Website. Our goal was to understand how well they support different interaction methods and where improvements could be made to create more inclusive designs.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Part I: Input Analysis</h2>
+      <p class="subtitle-description">We compared and contrasted different input methods (mouse, keyboard, and touch) across the three applications to understand their accessibility implications.</p>
+      
+      <div class="app-screenshots">
+        <div class="screenshot">
+          <img src="images/google-docs.png" alt="Google Docs dropdown interface" />
+          <p>Google Docs Dropdown</p>
+        </div>
+        <div class="screenshot">
+          <img src="images/macos.png" alt="MacOS File System dropdown" />
+          <p>MacOS File System</p>
+        </div>
+        <div class="screenshot">
+          <img src="images/brown-cs.png" alt="Brown CS Website dropdown" />
+          <p>Brown CS Website</p>
+        </div>
+      </div>
+
+      <div class="comparison-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Input Method</th>
+              <th>Google Docs</th>
+              <th>MacOS File System</th>
+              <th>Brown CS Website</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mouse</td>
+              <td>
+                <ul>
+                  <li>Submenu navigation is difficult - requires detoured path</li>
+                  <li>Direct path causes submenu to disappear</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Uses "shifting triangle" for easier submenu navigation</li>
+                  <li>Submenu stays open when moving between menu items</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Simple navigation with no submenus</li>
+                  <li>Clear visual feedback with orange highlight</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Keyboard</td>
+              <td>
+                <ul>
+                  <li>Good accessibility with keyboard shortcuts</li>
+                  <li>Arrow keys for menu navigation</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>No default keyboard shortcuts</li>
+                  <li>Can be customized in System Preferences</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Poor keyboard support</li>
+                  <li>Cannot access menu items with keyboard</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Touch</td>
+              <td>
+                <ul>
+                  <li>Direct tap access to submenus</li>
+                  <li>Easier than mouse navigation</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>No touch screen support</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Direct tap navigation</li>
+                  <li>No hover effects in touch mode</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="illustration">
+            <img src="images/Google-doc-mouse-illustration.png" alt="Illustration of mouse paths in Google Docs dropdown" />
+            <p class="illustration-caption">Illustration of mouse paths in Google Docs dropdown</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2>Part II: Output Analysis</h2>
+        <p class="subtitle-description">Another way to make components accessible is to allow users to do things multiple ways (outputs). Here we compare and contrast ways of outputs (styles, voiceover, focus order, etc) across the three applications.</p>
+        
+        <div class="output-list">
+          <ul>
+            <li>
+              <strong>Background Color:</strong> All three applications use background color changes as visual cues. Google Docs uses dark gray, MacOS uses light green, and Brown CS uses orange with white borders for enhanced contrast.
+            </li>
+            <li>
+              <strong>Floating Label:</strong> Google Docs uniquely displays a black box with the dropdown's function (e.g., "Styles," "Font") on hover, helping both mouse users and VoiceOver users. MacOS and Brown CS lack this feature.
+            </li>
+            <li>
+              <strong>Border:</strong> Brown CS adds a white border to clicked menu items, providing an additional visual cue beyond background color changes.
+            </li>
+            <li>
+              <strong>Arrows:</strong> Google Docs includes a directional arrow that flips when the menu expands/collapses. This feature is absent in MacOS and Brown CS.
+            </li>
+            <li>
+              <strong>VoiceOver:</strong> Google Docs provides detailed VoiceOver instructions (e.g., "You are currently on a toolbar..."). MacOS has no VoiceOver output, while Brown CS only offers generic "web content" messages.
+            </li>
+            <li>
+              <strong>Focus Order:</strong> MacOS offers the best keyboard navigation with logical left-to-right tab order and arrow key submenu access. Google Docs follows a general layout but skips some menu items. Brown CS lacks keyboard navigation entirely.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+    <section class="project-section">
+      <h2>Part III: Redesign Solutions</h2>
+      <p class="subtitle-description">Based on our analysis, we proposed several improvements to enhance accessibility in dropdown menus.</p>
+
+      <div class="state-model-section">
+        <h3>Mouse User Improvements</h3>
+        <div class="state-comparison">
+          <div class="state-image">
+            <img src="images/mouse-old-state-model.png" alt="Original mouse user state model" />
+            <p>Original Design: Mouse users must follow a precise path to access submenus</p>
+          </div>
+          <div class="state-image">
+            <img src="images/mouse-new-state-model.png" alt="New mouse user state model" />
+            <p>Improved Design: Added delay before submenu closes and wider clickable area</p>
+          </div>
+        </div>
+
+        <div class="design-changes">
+          <div class="change">
+            <h4>Change 1: Hover to Expand</h4>
+            <p>I removed the requirement to click to expand dropdown items. Now, the dropdown expands directly upon hover, eliminating the need for a mouse click.</p>
+            <p>This improves the efficiency of user navigation, especially for first-time users, as they can immediately see the expanded submenu items without needing to click.</p>
+            <p><strong>Trade-offs:</strong> However, this change comes with a trade-off. The interface may become slightly more crowded since all submenus will expand upon hover, which could be less ideal for repeated users who are already familiar with the submenu content.</p>
+          </div>
+
+          <div class="change">
+            <h4>Change 2: Improved Submenu Navigation</h4>
+            <p>I added "shifting triangle" for expanded submenus to make it easier to reach an item in submenu; I also added time delay to make it harder for the expanded submenu to collapse.</p>
+            <p>This change solves a major issue in Google Doc dropdowns: when a user tries to click a submenu item by moving the cursor in a straight line, the submenu collapses as the cursor briefly leaves the submenu region (this path is highlighted in red in the diagram). The only reliable way to reach the submenu is by taking a less direct, detoured path, which is unintuitive and inefficient (highlighted in blue).</p>
+            <p>The first part of this change introduces a "shifting triangle," which prevents the submenu from disappearing when the cursor temporarily leaves its region while moving toward a submenu item. This adjustment accommodates users with shaky hands and enhances accessibility. The second part adds a time delay, reducing the likelihood of the expanded submenu collapsing too quickly.</p>
+            <p><strong>Trade-off:</strong> These changes improve learnability and accessibility by allowing users to follow an intuitive straight-line path to the submenu item rather than taking a detour. However, efficiency may be slightly compromised for users who prefer to close the submenu by moving the cursor out of the region, as they now have to wait for the time delay.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="state-model-section">
+        <h3>Keyboard User Improvements</h3>
+        <div class="state-comparison">
+          <div class="state-image">
+            <img src="images/keyboard-old-state-model.png" alt="Original keyboard interaction state model" />
+            <p>Original Design: Limited keyboard navigation with inconsistent focus order</p>
+          </div>
+          <div class="state-image">
+            <img src="images/keyboard-new-state-model.png" alt="Improved keyboard interaction state model" />
+            <p>Improved Design: Consistent tab order and arrow key navigation for all menu items</p>
+          </div>
+        </div>
+
+        <div class="design-changes">
+          <div class="change">
+            <h4>Change 1: Left Arrow to Close Submenu</h4>
+            <p>Currently, there's no way to close an expanded submenu without exiting the entire dropdown. Adding the left arrow key to close the submenu makes it more efficient for users to return to the parent item.</p>
+            <p>This change is also easy to learn since the right arrow expands the submenu, so it's intuitive that the left arrow should close it.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Example Designs</h3>
+      <p>Based on our analysis above, we have redesigned the dropdown for mouse users. Here we present the "Default" state and "Submenu expanded" state.</p>
+      
+      <div class="design-states">
+        <div class="state-image-row">
+          <div class="design-state">
+            <img src="images/initial-state-design.png" alt="Initial state design" />
+            <p>Initial State</p>
+          </div>
+          <div class="design-state">
+            <img src="images/hover-state-design.png" alt="Hover state design" />
+            <p>Hover Over Submenu Item State</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     
+
+    <section class="project-section" id="reflection">
+      <h2>Part IV: Reflection</h2>
+      <div>
+        <p><strong>What do these three applications do well:</strong></p>
+        <p>MacOS File's learnability for keyboard users is excellent. On the right side of most menu items, the corresponding keyboard shortcut is explicitly displayed (e.g., "Ctrl + Option + U"). This makes navigation easier for first-time and occasional users.</p>
+        <p>Brown CS does a great job of providing multiple cues for a single action. For example, when a submenu item is clicked, not only does the background color change to bright orange, but the item also gains a white border. These cues are not only visually appealing but also enhance the user experience by making interactions smoother.</p>
+        <p>When a user hovers, clicks, etc., Google Docs always provides feedback, such as darkening the background. This ensures that each user action is accompanied by visual cues, helping them understand what the action does and how to achieve the functionality they want.</p>
+        
+        <br />
+        
+        <p><strong>Examples of how the accessibility/inaccessibility of inputs and outputs in the three applications could also impact users with impairments either positively or negatively, respectively:</strong></p>
+        <p>Positive example: Google Docs provides comprehensive accessibility support. Every action that can be performed with a mouse can also be completed using only the keyboard. It is also highly intuitive with great learnability. I watched a YouTube tutorial and became comfortable navigating the page using only the keyboard within five minutes.</p>
+        <p>Negative example: The Brown CS website has poor accessibility support for keyboard users. Only interactive elements, such as the search bar, can be reached. Users cannot select menu items, making it impossible to navigate to subpages.</p>
+        
+        <br />
+        
+        <p><strong>Accessibility considerations that were not addressed that we accounted for in our design:</strong></p>
+        <p>The submenu disappears when the cursor moves slightly outside its boundary, making navigation difficult for users with motor impairments or shaky hands. We solved this problem by implementing a "shifting triangle" and adding a delay before collapsing the submenu to improve accessibility.</p>
+        
+        <br />
+        
+        <p><strong>Between mouse, keyboard, touch/mobile, and screen reader users, which are most commonly prioritized in the process of creating components?</strong></p>
+        <p>Mouse users are definitely the most commonly prioritized when designing components, as they make up the majority of users. This means that when there is a conflict or tradeoff in functionality between mouse users and other users, mouse users are given priority. For example, many drag-and-drop interactions (e.g., file uploads, rearranging items) lack keyboard alternatives such as arrow keys or shortcuts.</p>
+        
+        <br />
+        
+        <p><strong>In her work at Mismatch.design and Google, Kat Holmes is helping other designers to rethink inclusive design not as a remedy for "personal health conditions" but as solves for "mismatches" — moments where human interactions are hindered by an absence of appropriate design solutions. How did our redesign solve a "mismatch" in our world?</strong></p>
+        <p>Our redesign solves a "mismatch" by addressing the lack of an intuitive way to close submenus for keyboard users. Previously, there wasn't a way for users to collapse an expanded submenu but had to exit the entire dropdown. This makes navigation inefficient and frustrating. By introducing the left arrow key to close submenus, we created a logical and learnable interaction that aligns with how users expect keyboard navigation to work—right to expand, left to collapse. This makes the experience more inclusive for keyboard users.</p>
+      </div>
+    </section>
+
+    <section class="project-section conclusion">
+      <h2>Conclusion</h2>
+      <p>This project changed my understanding of accessibility in interface design. By analyzing dropdown menus across different platforms, I learned that accessibility isn't just about compliance but about creating intuitive experiences for all users. The most important lesson was that small design decisions can significantly impact user experience, especially for those with different needs. This experience taught me to think about accessibility from the start of the design process, considering multiple interaction methods and user scenarios to create truly inclusive interfaces.</p>
+    </section>
+
+    <div class="back-button">
+      <a href="index.html#projects">Back to Projects</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> 

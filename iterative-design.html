@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iterative Design - Sesame</title>
+  <link rel="stylesheet" href="project-styles.css">
+</head>
+<body>
+    <div class="hero-image">
+        <img src="images/sesame.png" alt="Sesame Medical Marketplace" class="hero-image">
+      </div>
+  <div class="project-container">
+    <div class="back-button">
+      <a href="index.html#projects">Back to Projects</a>
+    </div>
+
+    <header class="project-header">
+        <h1>Iterative Website Design for Sesame</h1>
+        <div class="project-meta">
+          <div class="meta-section">
+            <div class="meta-item">
+              <span class="meta-label">Role</span>
+              <span class="meta-value">UI/UX Designer</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Timeline</span>
+              <span class="meta-value">Four weeks</span>
+            </div>
+          </div>
+          <div class="meta-section">
+            <div class="meta-item">
+              <span class="meta-label">Skills</span>
+              <div class="project-tags">
+                <span class="project-tag">Iterative Design</span>
+                <span class="project-tag">Basalmiq</span>
+                <span class="project-tag">Figma</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="meta-item">
+            <span class="meta-label">Users</span>
+            <span class="meta-value">Sesame Providers and Patients</span>
+          </div>
+          <div class="meta-section">
+            <div class="meta-item">
+              <span class="meta-label">Lessons</span>
+              <span class="meta-value">Business needs evolve quickly, and iterative design is key to keeping up. Collaborating with Sesame taught me to <b>combine technical skills and entrepreneurial thinking</b>. I learned to ask targeted clarifying questions to uncover the stakeholders' underlining goals and constraints. When there is ambiguity, I proactively invited feedback and clearly explained the tradeoffs behind my design decisions to keep stakeholders informed. This experience strengthened my ability to balance <b>short-term delivery with long-term product thinking</b>.</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+
+
+
+    <section class="project-section">
+        <h2>Context</h2>
+        <p>We've all experienced websites that just work:  finding the right information feels effortless, and the design quietly guides you without friction. These sites might look simple, but behind them is a <b>thoughtful process of iterative design</b> grounded in user needs and business goals. </p>
+        <p>That's exactly the approach I took when working with <a href="https://sesamecare.com/">Sesame</a>, a patient-centered healthcare startup focused on connecting patients to affordable care. A key part of Sesame's platform is a <b>medical content hub</b> featuring blogs and videos that helps  patients access  health information and enables providers to attract visits through the platform. In this project, I worked in a team of four on the iterative design of their blog page. In this case study, I'll walk through how we approached the their current problems, analyzed the tradeoffs of different solutions, and collaborated with stakeholders to come up with the new design. </p>
+      <h2>Part 1: Understanding the Problem Statement</h2>
+      <p>Sesame's article and blog pages generate strong web traffic, but they currently face key challenges in converting readers into paying users. To address this, we identified four main areas of improvement:</p>
+      <ul>
+        <li><b>Content Accessibility:</b>
+            Articles are overly text-heavy, which hinders readability and makes it hard for users to extract quick, actionable insights.</li>
+        <li><b>Weak Conversion Pathways:</b>
+            There are no effective calls to action or integration with subscription or booking funnels, leading to missed opportunities for conversion.</li>
+        <li><b>Inefficient Content Creation:</b>
+            Content is produced by the marketing team and part-time medical experts, creating bottlenecks. There's also no easy way for providers to contribute directly.</li>
+        <li><b>Missed AI Opportunities:</b>
+            AI tools could support providers in generating both written and video content, improving both speed and quality of production.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Part 2: Sketching and Wireframing</h2>
+      <p>Now that we understand the problems, we can brainstorm ideas and create sketches. Below are 4 sets of sketches covering 4 key pages we believe are essential to solving these issues in the content hub: a blog article page, a provider dashboard, and AI-assisted blog and video creation pages.</p>
+      <p><b>Note:</b> all sketches and wireframes are scrollable.</p>
+      <h3>Set 1</h3>
+      <div class="scrollable-mockup">
+        <img src="images/sketch_1.png" alt="Sketch Set 1">
+      </div>
+      
+      <h3>Set 2</h3>
+      <div class="scrollable-mockup">
+        <img src="images/sketch_2.png" alt="Sketch Set 2">
+      </div>
+      
+      <h3>Set 3</h3>
+      <div class="scrollable-mockup">
+        <img src="images/sketch_3.png" alt="Sketch Set 3">
+      </div>    
+      
+      <h3>Set 4</h3>
+      <div class="scrollable-mockup">
+        <img src="images/sketch_4.png" alt="Sketch Set 4">
+      </div>
+
+      <p>After sketching, we discussed the pros and cons of each design and combined elements from the best ones to move forward with. Below, we created <b>low-fidelity wireframes</b> for the selected designs as a starting point for the first round of feedback.</p>
+
+      <h3>Page 1: Blog Homepage</h3>
+      <ul>
+        <li>Although our original sketches didn't include a blog homepage, we realized during team discussions that adding one would help users explore topic-based content and browse by popularity, hence boosting user engagement and improving conversion rates.</li>
+        <li>We moved away from a text-heavy layout and designed a <b>modular, user-focused experience</b> that feels more dynamic and personalized.</li>
+        <li>The hero section now features a welcome message and search bar, helping users find relevant health content quickly. This improves accessibility and encourages <b>active exploration</b> over passive reading.</li>
+      </ul>
+      <div class="scrollable-mockup">
+        <img src="images/lofi1_blog_home.png" alt="Blog Homepage Wireframe">
+      </div>
+      
+
+      <h3>Page 2: Individual Article Page</h3>
+      <ul>
+        <li>We used the design from Set 1 as the baseline, since its layout is the most intuitive and offers a clear <b>information hierarchy</b>.</li>
+        <li>We integrated a floating provider section from Set 2. Users can click into the provider's profile, book an appointment, or ask questions. By increasing <b>provider visibility</b>, we aim to boost conversions and support personal brand-building.</li>
+        <li>To improve article <b>readability</b>, especially for users who prefer visual content, we added the video section from Set 4.</li>
+      </ul>
+      <div class="scrollable-mockup">
+        <img src="images/lofi2_blog_subpage.png" alt="Article Page Wireframe">
+      </div>
+      
+
+      <h3>Page 3: Provider Dashboard</h3>
+      <ul>
+        <li>We combined the strongest elements from Sets 1, 3, and 4, using Set 4 as the foundation and layering in key features from the others.</li>
+        <li>The most important addition is the <b>Quick Stats</b> section, which gives providers a snapshot of their content's performance, broken down by articles and videos.</li>
+        <li>This visibility aligns with Sesame's goal of encouraging consistent content creation by making performance data <b>easily accessible and actionable</b>.</li>
+        <li>We also placed a "Create Content" call-to-action at the top right to prompt immediate engagement.</li>
+      </ul>
+
+      <div class="scrollable-mockup">
+        <img src="images/lofi3_provider_dashboard.png" alt="Provider Dashboard Wireframe">
+      </div>
+     
+      <h3>Page 4: AI Assistant Page</h3>
+      <ul>
+        <li>We explored a <b>step-by-step, modularized AI assistant</b> that simplifies article drafting by guiding providers through clear steps. However, this approach limited flexibility and creativity.</li>
+        <li>We also considered a chat-based AI assistant, which gives providers more freedom but is more open-ended and might not always lead to the intended outcomes.</li>
+        <li>We chose the chat-based model because users are already familiar with this format through tools like ChatGPT and Claude, which aligns with their mental models of how AI works.</li>
+        <li>We also introduced an <b>interactive canvas for editing</b>, where users can highlight specific sentences and prompt the AI to revise them.</li>
+      </ul>
+        <div class="scrollable-mockup">
+        <img src="images/ai_wireframe.png" alt="AI Assistant Wireframe">
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Part 3: First Round of Feedback from Startup</h2>
+      <p>After sharing our low-fidelity wireframes with Sesame's product team (advisor Ravi Mehta and design lead Chris Chon), we received thoughtful and actionable feedback:</p>
+      <ul>
+        <li><b>Home page:</b> The team liked the simplicity and modular layout of the homepage. Also, they emphasized the challenge to implement more visual hierarchy within the "Featured Articles" search as well as a more interactable search functionality along with the search bar.</li>
+        <li><b>Article page:</b> They emphasized the need for consistent styling across articles, as well as the possibility of including related content and utilize the knowledge of authenticated users in the insights section.</li>
+        <li><b>AI assistant page:</b> Ravi pointed out the need to balance between modular approach while also ensuring usability of the page.</li>
+        <li><b>Provider dashboard:</b> Both were excited about the AI insights section; Chris suggested including more meaningful stats to better motivate providers, while Ravi emphasized offering clearer guidance on what topics providers should write about.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Part 4: Hi-Fi Prototyping</h2>
+      <p>We refined our designs based on the feedback and below are the final high-fidelity prototypes for five redesigned screens. Each layout emphasizes usability, responsiveness, and visual hierarchy while addressing Sesame's problem statements.</p>
+
+      <h3>Page 1: Blog Homepage</h3>
+      <ul>
+        <li>Integrated a bold hero section with guided search prompts, directly addressing feedback about shifting users from passive reading to active exploration.</li>
+        <li>Enhanced search functionality with natural language support, reflecting concerns about users struggling with medical jargon or not knowing what to search for.</li>
+        <li>Redesigned the article layout to emphasize high-impact content, implementing feedback on improving visual hierarchy and user flow through the homepage.</li>
+      </ul>
+      <div class="scrollable-mockup">
+        <img src="images/Blog homepage.png" alt="Hi-Fi Blog Homepage">
+      </div>
+       
+
+      <h3>Page 2: Individual Article Page</h3>
+      <ul>
+        <li>The hi-fi design addressed the first feedback by moving the video to the hero section. For articles without a video, a hero image can be placed instead, making the overall layout more consistent.</li>
+        <li>The hi-fi design incorporated the second piece of feedback by adding an "Explore More" section at the end of each article, recommending similar content to encourage continued engagement.</li>
+        <li>The hi-fi design responded to the third feedback by tailoring the AI-generated key insights based on user data—for example, their demographics or health concerns.</li>
+      </ul>
+      <div class="scrollable-mockup">
+        <img src="images/Blog subpage.png" alt="Hi-Fi Article Subpage">
+      </div>
+       
+
+      <h3>Page 3: Provider Dashboard</h3>
+      <ul>
+        <li>Displays article count, reads, bookings, and conversion rate with rank context (e.g., "Top 1% performer"), reflecting feedback to incentivize providers through status and performance comparison.</li>
+        <li>Highlights trending topics and suggested content creation areas based on user interest and platform trends, addressing feedback about helping providers choose impactful topics.</li>
+        <li>Clear CTAs for "Create Articles," "Use Drafty AI," and "View Performance" encourage frequent publishing and experimentation, aligning with feedback to turn insights into actions.</li>
+      </ul>
+      <div class="scrollable-mockup">
+        <img src="images/Dashboard.png" alt="Hi-Fi Provider Dashboard">
+      </div>
+      
+
+      <h3>Page 4: AI Assistant Page</h3>
+      <ul>
+        <li>We incorporated the startup's feedback to ensure the AI assistant and chat input prompts clearly state the type of content expected from users at each stage of the workflow.</li>
+        <li>We also further refined features such as the two interactive canvases as the team members requested.</li>
+      </ul>
+
+      <div class="scrollable-mockup">
+        <img src="images/ai_tool_page.png" alt="Hi-Fi Drafty AI Page">
+      </div>
+       
+      <h3>Page 5: Appointment Booking Flow</h3>
+      <ul>
+        <li>This is a new page we added where patients can book directly from within article or provider views, streamlining their journey from discovery to conversion.</li>
+        <li>Patients can browse available times across providers without toggling between multiple pages.</li>
+      </ul>
+      <div class="scrollable-mockup">
+        <img src="images/highfi_appointment.png" alt="Hi-Fi Appointment Booking Flow">
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Part 5: Final Feedback and Reflection</h2>
+      <p>After delivering our <a href="https://www.figma.com/design/fj3E49BbCGWkeIIAf4YqGV/Hi-fi-Prototype-4-10?node-id=0-1&t=P6vnD2MB2xYYA67d-1">high-fidelity prototype</a>, we conducted another review session with the Sesame team. They appreciated the clearer conversion pathways and praised the AI assistant's modularity and editing experience.</p>
+      <p>If we had more time, we would run usability tests on mobile responsiveness, A/B test the blog layout vs. provider-first layout, and gather analytics on engagement with Drafty AI. Overall, this project taught us the value of iterative user feedback and how collaborative design can support both patient and provider needs in real-world applications.</p>
+    </section>
+
+    <section class="project-section conclusion">
+      <h2>Conclusion</h2>
+      <p>This project taught me that great design is never static: it's a continuous conversation between users, stakeholders, and designers. Working with Sesame showed me how to balance technical precision with business acumen, turning user feedback into actionable improvements. Most importantly, I learned that the best designs emerge when you treat every iteration as an opportunity to build trust and deliver real value to both patients and providers.</p>
+    </section>
+
+    <div class="back-button">
+      <a href="index.html#projects">Back to Projects</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> 
