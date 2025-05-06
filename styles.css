@@ -10,11 +10,15 @@ body {
 
 .desktop {
   position: relative;
-  height: 100vh;
+  /* height: 80vh; */
   width: 100vw;
   overflow-x: hidden;
-  padding: 30px, 80px, 80px, 80px;
+  padding: 30px 160px 80px 100px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .window {
@@ -51,12 +55,11 @@ body {
 
 .window .item {
   border-bottom: 3px solid #333;
-  padding-left: 20px ;
   padding-bottom: 2px;
+  padding-left: 20px;
   flex-grow: 1;
   margin-right: 30px;
   transition: all 0.3s ease;
- 
 }
 
 .window:hover .item {
@@ -73,17 +76,18 @@ body {
 }
 
 .profile {
-  position: absolute;
-  top: 200px;
-  left: 120px;
+  position: relative;
   max-width: 600px;
-  z-index: 10;
+  padding-top: 150px;
+  z-index: 1;
+  margin-right: 40px;
 }
 
 .profile h1 {
   font-size: 3rem;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-weight: bold;
+  color: #333;
 }
 
 .profile p {
@@ -100,64 +104,60 @@ body {
 }
 
 .mountain {
-  position: absolute;
-  right: 200px;
-  bottom: 100px;
-
-  max-width: 600px;
+  position: relative;
+  max-width: 500px;
   min-width: 250px;
+  padding-top: 150px;
+  z-index: -1;
+  flex-shrink: 0;
 }
-
 
 @media (max-width: 1200px) {
   .window {
     font-size: 1.2em;
   }
   .mountain {
-
-    max-width: 500px;
+    max-width: 350px;
+    margin-top: 100px;
+  }
+  
+  .profile h1 {
+    font-size: 2.8rem;
   }
 }
-
- 
-
-@media (max-width: 768px) {
-  .window {
-    font-size: 1em;
+/* 
+@media (max-width: 900px) {
+  .mountain {
+  
   }
+  
+  .profile h1 {
+    font-size: 2.5rem;
+  }
+} */
 
+@media (max-width: 1000px) {
   .desktop {
-   padding: 100px 80px 80px 80px;
+    /* padding: 50px 80px 80px 80px; */
     height: auto;
-    display: flex;
+    min-height: 400px;
     flex-direction: column;
   }
 
   .profile {
-    position: relative;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    text-align: center;
-    margin: 60px auto 0 auto;
-    z-index: 1;
+    margin-right: 0;
+    margin-bottom: 30px;
+    /* padding-top: 0; */
   }
 
-  .note-text {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    text-align: center;
-    margin: 40px auto;
+  .profile h1 {
+    font-size: 2.2rem;
   }
 
   .mountain {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    width: 80%;
+    max-width: 350px;
+    padding-top: 0;
     margin: 0 auto;
-    display: block;
   }
 }
 
@@ -165,43 +165,31 @@ body {
   .desktop {
     padding: 20px;
     height: auto;
-    display: flex;
-    flex-direction: column;
+    min-height: 300px;
   }
   
   .window {
-    position: relative !important;
-    top: 0 !important;
+    position: relative;
+    width: 100%;
     left: 0 !important;
-    margin: 10px auto;
-    width: 90%;
-    max-width: 400px;
+    margin-bottom: 10px;
+    padding: 20px;
+  }
+  
+  .window .item {
+    margin-right: 0;
+    text-align: center;
   }
   
   .profile {
-    position: relative;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    text-align: center;
-    margin: 20px auto;
-  }
-  
-  .note-text {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    text-align: center;
-    margin: 40px auto;
+    padding-top: 50px;
+    margin-bottom: 20px;
   }
   
   .mountain {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    width: 80%;
+    width: 70%;
+    max-width: 300px;
     margin: 0 auto;
-    display: block;
   }
 }
 
@@ -280,7 +268,6 @@ body {
   margin-bottom: 15px;
 }
 
- 
 .project-content .project-tags {
   display: flex;
   flex-wrap: wrap;
@@ -318,7 +305,6 @@ body {
   pointer-events: auto;
 }
 
- 
 .project-overlay .project-description {
   line-height: 1.6;
   margin-bottom: 20px;
@@ -354,7 +340,6 @@ body {
   color: #F0ECE6;
 }
 
- 
 @media (max-width: 900px) {
   .projects-grid {
     grid-template-columns: 1fr;
@@ -362,7 +347,6 @@ body {
     margin: 0 auto;
   }
   
- 
   .project-card {
     height: auto;
   }
@@ -383,7 +367,6 @@ body {
     margin-top: 20px;
     font-size: 1rem;
   }
-  
   
   .project-content .project-tags {
     display: none;
@@ -409,7 +392,6 @@ body {
   }
 }
 
- 
 .identity-rotator {
   max-width: 800px;
   margin: 0 auto;
@@ -458,7 +440,6 @@ body {
   opacity: 1;
 }
 
- 
 @media (max-width: 768px) {
   .identity-rotator {
     margin-top: 15px;
@@ -531,7 +512,6 @@ body {
   transform: scale(1.1);
 }
 
- 
 @media (max-width: 1200px) {
   .fun-facts-section {
     padding: 50px 80px;
@@ -558,16 +538,11 @@ body {
 }
 
 @media (max-width: 768px) {
- 
- 
-  
   .fun-facts-section h2 {
- 
     margin-bottom: 30px;
   }
   
   .identity {
- 
     height: 45px;
     padding: 0 15px;
   }
@@ -575,8 +550,6 @@ body {
   .identity-rotator {
     height: 45px;
   }
-  
- 
   
   .control-lever img {
     height: 35px;
@@ -590,7 +563,6 @@ body {
   
   .fun-facts-section h2 {
     font-size: 1.6rem;
- 
   }
   
   .identity {

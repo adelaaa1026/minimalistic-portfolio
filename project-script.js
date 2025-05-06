@@ -1,4 +1,4 @@
-// Progress bar functionality
+ 
 document.addEventListener('DOMContentLoaded', () => {
   const progressFill = document.querySelector('.progress-fill');
   
@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
   window.addEventListener('scroll', updateProgressBar);
   
-  // Initialize progress bar
+ 
   updateProgressBar();
   
-  // Close button functionality
+ 
   document.querySelector('.close').addEventListener('click', () => {
     window.location.href = 'index.html';
   });
